@@ -156,7 +156,7 @@ async function onDonation(
           logDonation(guildMember, amount, paymentSource, paymentId, senderName, message, timestamp),
       ]);
   } catch (err) {
-      console.warn('Error updating donor role');
+      console.warn('Error updating donor role and logging donation');
       console.warn(err);
   }
 }
