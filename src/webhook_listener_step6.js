@@ -4,13 +4,13 @@ const app = express();
 const PORT = process.env.PORT || 80;
 
 class WebhookListener {
- listen() {
-   app.get('/kofi', (req, res) => {
-     res.send('Hello');
-   });
+  listen() {
+    app.get('/kofi', (req, res) => {
+      res.send('Hello');
+    });
 
-   app.listen(PORT);
- }
+    app.listen(PORT);
+  }
 }
 
 const listener = new WebhookListener();

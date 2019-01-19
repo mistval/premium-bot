@@ -29,7 +29,7 @@ bot.on('messageCreate', async (msg) => {
 
   // Ignore any message that doesn't start with the correct prefix.
   if (!content.startsWith(PREFIX)) {
-      return;
+    return;
   }
 
   // Extract the name of the command
@@ -39,18 +39,18 @@ bot.on('messageCreate', async (msg) => {
   // Get the appropriate handler for the command, if there is one.
   const commandHandler = commandHandlerForCommandName[commandName];
   if (!commandHandler) {
-      return;
+    return;
   }
 
   // Separate the command arguments from the command prefix and command name.
   const args = parts.slice(1);
 
   try {
-      // Execute the command.
-      await commandHandler(msg, args);
+    // Execute the command.
+    await commandHandler(msg, args);
   } catch (err) {
-      console.warn('Error handling command');
-      console.warn(err);
+    console.warn('Error handling command');
+    console.warn(err);
   }
 });
 
