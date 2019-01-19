@@ -8,7 +8,9 @@ Premium Bot is an example bot that helps manage donations and donor roles in a D
 
 Source code is included for every step presented in the tutorial part of the blog post.
 
-The final code can be run with `npm start` or `node src/bot.js`.
+After cloning the repo, install dependencies with `npm install`.
+
+The final code can then be run with `npm start` or `node src/bot.js`.
 
 Code for other steps can be run with `node src/bot_step1.js`, `node src/bot_step2.js`, etc.
 
