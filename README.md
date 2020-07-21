@@ -15,3 +15,7 @@ Provide your bot token, Discord user ID, and the ID of your log channel in **con
 The final code can then be run with `npm start` or `node src/bot.js`.
 
 Code for other steps can be run with `node src/bot_step1.js`, `node src/bot_step2.js`, etc.
+
+## Updates
+
+July 21, 2020 - Updated Eris to the latest version.
