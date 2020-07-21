@@ -36,7 +36,7 @@ commandForName['addpayment'] = {
     const mention = args[0];
     const amount = parseFloat(args[1]);
     const guild = msg.channel.guild;
-    const userId = mention.replace(/<@(.*?)>/, (match, group1) => group1);
+    const userId = mention.replace(/<@!?(.*?)>/, (match, group1) => group1);
     const member = guild.members.get(userId);
 
     // TODO: Handle invalid arguments, such as:

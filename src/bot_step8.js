@@ -129,13 +129,13 @@ function logDonation(member, donationAmount, paymentSource, paymentId, senderNam
         { name: 'Payment ID', value: paymentId, inline: true },
         { name: 'Sender', value: senderName, inline: true },
         { name: 'Donor Discord name', value: memberName, inline: true },
-        { name: 'Donation amount', value: donationAmount.toString(), inline: true },
+        { name: 'Donation amount', value: donationAmount.toFixed(2), inline: true },
         { name: 'Message', value: message, inline: true },
       ],
     }
   }
 
-  bot.createMessage(LOG_CHANNEL_ID, logMessage);
+  return bot.createMessage(LOG_CHANNEL_ID, logMessage);
 }
 
 async function onDonation(
