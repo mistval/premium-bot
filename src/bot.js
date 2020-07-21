@@ -37,7 +37,7 @@ commandForName['addpayment'] = {
     const mention = args[0];
     const amount = parseFloat(args[1]);
     const guild = msg.channel.guild;
-    const userId = mention.replace(/<@(.*?)>/, (match, group1) => group1);
+    const userId = mention.replace(/<@!?(.*?)>/, (match, group1) => group1);
     const member = guild.members.get(userId);
 
     const userIsInGuild = !!member;
@@ -129,13 +129,13 @@ function logDonation(member, donationAmount, paymentSource, paymentId, senderNam
         { name: 'Payment ID', value: paymentId, inline: true },
         { name: 'Sender', value: senderName, inline: true },
         { name: 'Donor Discord name', value: memberName, inline: true },
-        { name: 'Donation amount', value: donationAmount.toString(), inline: true },
+        { name: 'Donation amount', value: donationAmount.toFixed(2), inline: true },
         { name: 'Message', value: message, inline: true },
       ],
-    }
-  }
+    },
+  };
 
-  bot.createMessage(LOG_CHANNEL_ID, logMessage);
+  return bot.createMessage(LOG_CHANNEL_ID, logMessage);
 }
 
 async function onDonation(
