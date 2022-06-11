@@ -18,6 +18,8 @@ Code for other steps can be run with `node src/bot_step1.js`, `node src/bot_step
 
 ## Updates
 
-July 21, 2020 - Updated Eris to the latest version, fixed missing return statement, fixed mention handling, used toFixed for string formatting.
+June 11, 2022 - Updated Eris to the latest version, updated package-lock.json format for NPM 7+.
 
 April 24, 2021 - Updated Eris to the latest version.
+
+July 21, 2020 - Updated Eris to the latest version, fixed missing return statement, fixed mention handling, used toFixed for string formatting.
