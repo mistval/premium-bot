@@ -12,6 +12,6 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "eris": "^0.17.0",
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
